@@ -1,10 +1,10 @@
 /*
- *  Created on: Oct 30, 2023
+ *  Created on: Oct 30, 2024
  *  Author: BalazsFarkas
- *  Project: STM32_Dictaphone
+ *  Project: STM32_SDIO_Fatfs
  *  Processor: STM32F405
  *  File: ClockDriver_STM32F405.h
- *  H2ader version: 1.3
+ *  H2ader version: 1.0
  */
 
 #ifndef INC_RCCTIMPWMDELAY_CUSTOM_H_
