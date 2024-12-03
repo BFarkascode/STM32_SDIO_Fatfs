@@ -24,7 +24,7 @@ But I am getting ahead of myself. In reality, we will need to take a dive in the
 A quick jab, the SD specifications document isn’t any better in these sections, making it an extreme chore to figure out, what we need to communicate with the card. When one reads through the document, extreme care must be given on the type of card it is referring to, especially to avoid mixing up the driver demands for the different card types. What we need is “Sd memory card” and nothing else, even if the part is called “SDIO”. Confusing? You bet!
 
 ### SDIO peripheral
-But enough complaining about the SD documentation, what can SDIO do for us? Well, it is an alternative drive to SPI with completely different pins. which should liberate an SPI for us when using an Sdcard. Mind, an SDIO connected reader won’t be SPI compatible on a GPIO level, so once we picked SDIO, we are stuck with it.
+But enough complaining about the SD documentation, what can SDIO do for us? Well, it is an alternative drive to SPI with completely different pins, which should liberate an SPI for us when using an Sdcard. Mind, an SDIO connected reader won’t be SPI compatible on a GPIO level, so once we picked SDIO, we are stuck with it.
 
 SDIO is not limited to 10 MHz like SPI and has a “parallel” feature, where it can theoretically push data transfer rates from under 10 MHz to around 100 MHz (4-bit wide bus with 25 MHz clocking).
 
@@ -38,11 +38,11 @@ Even just a small amount of reading up on the SDIO indicated to me that I am up 
 
 Checking forum threads, it seemed to me that I was dealing with a peripheral that was “gently forgotten” by ST some time ago. Just an FYI, most bug reports I came across were dating back to the early 2010’s with apparently still no solution provided for the issues ever since.
 
-To make things worse, the CubeMx solution is officially bugged on the F4xx devices, meaning that it won’t work at all if we intended to set it up without doing knowing what we are doing, defeating the purpose of having HAL. (Just a note, the GPIOs should be set to medium speed with a pullup in everything except the SCK line to repair this particular bug. 4-wide bus will not work without manual intervention though so don’t activate that).
+To make things worse, the CubeMx solution is officially bugged on the F4xx devices, meaning that it won’t work at all if we intended to set it up without knowing what we are doing, defeating the purpose of having HAL here whatsoever. (Just a note, the GPIOs should be set to medium speed with a pullup in everything except the SCK line to repair that particular bug. 4-wide bus will not work without manual intervention though so don’t activate that in CubeMx).
 
-There are multiple reports of SDIO FIFO underrun conditions that have vague solutions only and questionable results (more on that later).
+There are multiple reports of SDIO FIFO underrun conditions that have only vague solutions only and questionable results (more on that later).
 
-The SDIO code example to block read in the refman is also complete garbage and missing crucial details that must be respected in order to avoid the peripheral to time out.
+The SDIO code example to conduct a "block read" in the refman is also complete garbage, missing out on crucial details that must be respected in order to avoid the peripheral to time out.
 
 This isn’t good…
 
