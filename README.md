@@ -1,5 +1,5 @@
 # STM32_SDIO_Fatfs
-Bare metal project to implement Fatfs using an SDIO interface on a STM32_F405RG Feather board.
+Bare metal project to implement Fatfs using an SDIO interface on an Adafruit STM32_F405RG Feather board.
 
 ## General description
 Ohh boy…
