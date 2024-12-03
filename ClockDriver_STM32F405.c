@@ -1,27 +1,11 @@
 /*
- *  Created on: Oct 30, 2023
+ *  Created on: Oct 30, 2024
  *  Author: BalazsFarkas
- *  Project: STM32_Dictaphone
+ *  Project: STM32_SDIO_Fatfs
  *  Processor: STM32F405
  *  File: ClockDriver_STM32F405.c
- *  Program version: 1.3
+ *  Program version: 1.0
  *  Change history:
- *
- *v.1.0
- * Below is a custom RCC configuration function, followed by the setup of TIM6 basic timer for time measurement and TIM2 for PWM.
- *
- *v.1.1
- *  Simplified version running only the delay function and the MCU clocking at 32 MHz
- *
- *v.1.2
- *  Clocking changed to 32 MHz with no AHB/APB1 and APB2 prescaling
- *  Clocking changed to F405
- *  File name changed
- *  Added TIM7 for press/push differentiation
- *
- *v.1.3
- *  Modified PLL by adding PLLQ definition - div 2
- *  Removed TIM7
  */
 
 #include <ClockDriver_STM32F405.h>
