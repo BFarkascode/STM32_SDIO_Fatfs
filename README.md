@@ -151,7 +151,7 @@ Many of the underruns were also repaired by this (i.e. introducing an asynch han
 ## Previous relevant projects
 I recommend giving a quick look over the SPI Sdcard project I have done before, just to get up to speed on the pitfalls using an Sdcard:
 - SAMD21_SPI_SD_fatfs
-- 
+
 I have also found the following blog to be useful describing SDIO problems and giving a hint over how to work around them:
 
 - https://blog.frankvh.com/2011/09/04/stm32f2xx-sdio-sd-card-interface/
